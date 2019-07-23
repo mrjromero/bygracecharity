@@ -1,7 +1,7 @@
 {
   "settings": {
-    "name": "By Grace Charity",
-    "currentPage": "index.html",
+    "name": "By Grace Charity-clone",
+    "currentPage": "shop.html",
     "theme": {
       "name": "mobirise4",
       "title": "Mobirise 4",
@@ -50,7 +50,7 @@
     "favicon": "",
     "noImageResize": "",
     "siteUrl": "undefined",
-    "uniqCompNum": 16,
+    "uniqCompNum": 21,
     "versionPublish": "4.10.5",
     "screenshot": "screenshot.png"
   },
@@ -1011,6 +1011,33 @@
           "_global": false,
           "_once": false,
           "_params": {}
+        }
+      ]
+    },
+    "shop.html": {
+      "settings": {
+        "meta_descr": "Support By Grace Charity by providing funding for families living in poverty. Your proceeds enable families to start a small business and create a livelihood. ",
+        "title": "By Grace Charity - Store",
+        "order": 2,
+        "header_custom": "<script language=JavaScript>\n<!--\n\n//Disable right mouse click Script\n//By Maximus (maximus@nsimail.com) w/ mods by DynamicDrive\n//For full source code, visit http://www.dynamicdrive.com\n\nvar message=\"Function Disabled!\";\n\n///////////////////////////////////\nfunction clickIE4(){\nif (event.button==2){\nalert(message);\nreturn false;\n}\n}\n\nfunction clickNS4(e){\nif (document.layers||document.getElementById&&!document.all){\nif (e.which==2||e.which==3){\nalert(message);\nreturn false;\n}\n}\n}\n\nif (document.layers){\ndocument.captureEvents(Event.MOUSEDOWN);\ndocument.onmousedown=clickNS4;\n}\nelse if (document.all&&!document.getElementById){\ndocument.onmousedown=clickIE4;\n}\n\ndocument.oncontextmenu=new Function(\"alert(message);return false\")\n\n// --> \n</script>"
+      },
+      "components": [
+        {
+          "_customTemplate": true,
+          "_afterNavbarItem": false,
+          "_customHTML": "<div id=\"myShop\">\n        <a href=\"https://shop.spreadshirt.com/by-grace-charity\">Loading shop...</a>\n</div>\n\n[JS_CODE_0]\n\n[JS_CODE_1]",
+          "_customCSS": "",
+          "alias": "code-editor",
+          "_tags": [
+            "Extension"
+          ],
+          "_name": "pro.custom-html",
+          "_anchor": "custom-html-i",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [
+            "<script>\n    var spread_shop_config = {\n        shopName: 'by-grace-charity',\n        locale: 'us_US',\n        prefix: 'https://shop.spreadshirt.com',\n        baseId: 'myShop'\n    };\n</script>",
+            "<script type=\"text/javascript\"\n        src=\"https://shop.spreadshirt.com/shopfiles/shopclient/shopclient.nocache.js\">\n</script>"
+          ]
         }
       ]
     }
