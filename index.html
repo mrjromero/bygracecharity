@@ -131,8 +131,34 @@ document.oncontextmenu=new Function("alert(message);return false")
         <div class="modalWindow" style="display: none;">
             <div class="modalWindow-container">
                 <div class="modalWindow-video-container">
-                    <div class="modalWindow-video">
-                        <iframe width="100%" height="100%" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-src="https://www.youtube.com/embed/u2PZ0vhWKxQ?controls=0;&amp;autoplay=1"></iframe>
+                    <div id="player" class="modalWindow-video">
+            
+                        <script type="text/javascript">
+                            var player;
+                            // This code loads the IFrame Player API code asynchronously. This is the Youtube-recommended script loading method
+                            var tag = document.createElement("script");
+
+                            tag.src = "https://www.youtube.com/iframe_api";
+                            var firstScriptTag = document.getElementsByTagName("script")[0];
+                            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                            //  This function is called by YouTube once the the API is ready.It creates an &lt;iframe&gt; and sets up the video player inside.
+                            function onYouTubeIframeAPIReady() {
+                                player = new YT.Player("player", {
+                                    videoId: "xUSYnaHaf1k",
+                                    playerVars: { 'autoplay': 1, 'modestbranding': 1, 'rel': 0 },
+                                    events: {
+                                        // API event handlers
+                                        onReady: onPlayerReady
+                                    }
+                                });
+                            }
+
+                            // The API will call this function when the video player is ready (in this case, start playing the video).
+                            function onPlayerReady(event) {
+                                event.target.playVideo();
+                            }
+                        </script>
                     </div>
                     <a class="close" role="button" data-dismiss="modal">
                         <span aria-hidden="true" class="mbri-close mbr-iconfont closeModal"></span>
@@ -276,7 +302,7 @@ document.oncontextmenu=new Function("alert(message);return false")
                         <a class="btn btn-md btn-white-outline display-4" href="#_givealways">DONATE</a></div>
             </div>
 
-            <div class="mbr-figure" style="width: 125%;"><iframe class="mbr-embedded-video" src="https://www.youtube.com/embed/KzumOzwCuLI?rel=0&amp;amp;showinfo=0&amp;autoplay=0&amp;loop=1&amp;playlist=KzumOzwCuLI" width="1280" height="720" frameborder="0" allowfullscreen></iframe></div>
+            <div class="mbr-figure" style="width: 125%;"><iframe class="mbr-embedded-video" src="https://www.youtube.com/embed/-6YYQGQME6w?rel=0&amp;amp;showinfo=0&amp;autoplay=0&amp;loop=0" width="1280" height="720" frameborder="0" allowfullscreen></iframe></div>
 
         </div>
     </div>
@@ -293,7 +319,7 @@ document.oncontextmenu=new Function("alert(message);return false")
             <div class="col-md-3 col-sm-4">
                 <div class="mb-3 img-logo">
                     <a href="#">
-                        <img src="assets/images/white-logo-transparent-background-290x1210.png" alt="" title="">
+                        <img src="assets/images/white-logo-transparent-background-290x12157.png" alt="" title="">
                     </a>
                 </div>
                 <p class="mb-3 mbr-fonts-style foot-title display-7">
@@ -322,7 +348,7 @@ document.oncontextmenu=new Function("alert(message);return false")
                 <div class="social-list pl-0 mb-0">
                         <div class="soc-item">
                             <a href="#" target="_blank">
-                                <span class="mbr-iconfont mbr-iconfont-social socicon-twitter socicon"></span>
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
                             </a>
                         </div>
                         <div class="soc-item">
@@ -335,11 +361,7 @@ document.oncontextmenu=new Function("alert(message);return false")
                                 <span class="mbr-iconfont mbr-iconfont-social socicon-youtube socicon"></span>
                             </a>
                         </div>
-                        <div class="soc-item">
-                            <a href="#" target="_blank">
-                                <span class="socicon-instagram socicon mbr-iconfont mbr-iconfont-social"></span>
-                            </a>
-                        </div>
+                        
                         
                         
                 </div>
